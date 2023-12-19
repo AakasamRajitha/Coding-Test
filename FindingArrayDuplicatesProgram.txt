@@ -1,0 +1,22 @@
+public class ArrayDuplicateElement 
+{  
+public static void main(String[] args) 
+{  
+         System.out.println("Aakasam Rajitha..Id: AF0330876 ");
+        //Initialize array elements below
+        int [] arrlist = new int [] {1, 2, 3,5, 4, 2, 7,5, 8, 8, 3};  
+        System.out.println("Duplicate elements in given arraylist is : ");  
+        //Searches for duplicate element  
+        //Here we are using inner loop for comparing adjecent values
+        //The result will print if the two adjecent values are same
+        //For this we are taking array lenght as a range
+        for(int i = 0; i < arrlist.length; i++) 
+        {  
+            for(int j = i + 1; j < arrlist.length; j++) 
+            {  
+                if(arrlist[i] == arrlist[j])  
+                    System.out.println(arrlist[j]);  
+            }  
+        }  
+    }  
+}

@@ -1,0 +1,40 @@
+import java.util.Arrays;
+
+public class AnagramChecker 
+{
+    public static void main(String[] args) 
+    {
+        System. out.println("Aakasam Rajitha...Id: AF0330876 ");
+        String str1 ="abc" ;
+        String str2 = "cab";
+
+        if (areAnagrams(str1, str2)) 
+        {
+            System.out.println("The given strings are anagrams.");
+        } 
+        else
+        {
+            System.out.println("The strings are not anagrams.");
+        }
+    }
+
+    public static boolean areAnagrams(String str1, String str2) 
+    {
+        // Check if the lengths are different
+        if (str1.length() != str2.length()) 
+        {
+            return false;
+        }
+
+        // Convert strings to character arrays
+        char[] charArray1 = str1.toCharArray();
+        char[] charArray2 = str2.toCharArray();
+
+        // Sort the character arrays
+        Arrays.sort(charArray1);
+        Arrays.sort(charArray2);
+
+        // Compare sorted arrays
+        return Arrays.equals(charArray1, charArray2);
+    }
+}
